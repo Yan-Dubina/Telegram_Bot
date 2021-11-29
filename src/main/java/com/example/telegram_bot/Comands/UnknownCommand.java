@@ -8,7 +8,7 @@ public class UnknownCommand implements Command {
     public static final String UNKNOWN_MESSAGE = "Я тебя не  понимаю! Введи  нормальную  команду!" +
             "\\uD83D\\uDE1F, напишите /help чтобы узнать что я понимаю.";
 
-    private SendBotMessageService sendBotMessageService;
+    private final SendBotMessageService sendBotMessageService;
 
     public UnknownCommand(SendBotMessageService sendBotMessageService) {
         this.sendBotMessageService=sendBotMessageService;

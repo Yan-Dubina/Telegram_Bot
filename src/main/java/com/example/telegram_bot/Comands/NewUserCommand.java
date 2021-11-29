@@ -3,19 +3,18 @@ package com.example.telegram_bot.Comands;
 import com.example.telegram_bot.Services.SendBotMessageService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-public class NoCommand implements Command {
-
+public class NewUserCommand implements Command{
     private final SendBotMessageService sendBotMessageService;
 
-    public static String NO_COMMAND_MESSAGE = "Чтобы посмотреть список  команд напиши: /help  !";
+    public final static String NEW_USER_MESSAGE = "Привет, новый пользователь.Готов вкалывать";
 
-    public NoCommand(SendBotMessageService sendBotMessageService) {
+    public NewUserCommand(SendBotMessageService sendBotMessageService) {
         this.sendBotMessageService = sendBotMessageService;
     }
 
     @Override
     public void execute(Update update) {
-        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), NO_COMMAND_MESSAGE);
+        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), NEW_USER_MESSAGE);
 
     }
 }
