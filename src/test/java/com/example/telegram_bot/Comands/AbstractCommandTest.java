@@ -4,7 +4,6 @@ import com.example.telegram_bot.Components.TelegramBot;
 import com.example.telegram_bot.Services.SendBotMessageService;
 import com.example.telegram_bot.Services.SendBotMessageServiceImp;
 import com.example.telegram_bot.Services.TelegramUserService;
-import com.example.telegram_bot.Services.TelegramUserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
