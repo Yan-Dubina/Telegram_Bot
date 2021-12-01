@@ -7,6 +7,7 @@ public enum CommandName {
     HELP("/help"),
     NO_COMMAND("nocommand"),
     NEW_USER("/adduser"),
+    STAT("/stat"),
     STOP ("/stop");
 
     private final String commandName;

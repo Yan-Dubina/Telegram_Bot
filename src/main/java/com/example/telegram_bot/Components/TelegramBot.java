@@ -2,6 +2,8 @@ package com.example.telegram_bot.Components;
 
 import com.example.telegram_bot.Comands.CommandContainer;
 import com.example.telegram_bot.Services.SendBotMessageServiceImp;
+import com.example.telegram_bot.Services.TelegramUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -25,8 +27,9 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     public static String COMMAND_PREFIX = "/";
 
-    public TelegramBot() {
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImp(this));
+    @Autowired
+    public TelegramBot(TelegramUserService telegramUserService) {
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImp(this),telegramUserService);
     }
 
     @Override
