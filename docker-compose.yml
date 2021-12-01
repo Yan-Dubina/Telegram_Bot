@@ -2,9 +2,26 @@ version: '3.1'
 
 services:
   telegrambotapplication:
+    depends_on:
+      - telegram-db
     build:
       context: .
     environment:
-      - BOT_NAME=${BOT_NAME}
-      - BOT_TOKEN=${BOT_TOKEN}
+      BOT_NAME: ${BOT_NAME}
+      BOT_TOKEN: ${BOT_TOKEN}
+      BOT_DB_USERNAME: ${BOT_DB_USERNAME}
+      BOT_DB_PASSWORD: ${BOT_DB_PASSWORD}
     restart: always
+  telegram-db:
+    image: mysql:5.7.29
+    restart: always
+    container_name: dev-telegrambot-db
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    environment:
+      MYSQL_DATABASE: 'dev_telegram_db'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_USER: ${BOT_DB_USERNAME}
+      MYSQL_PASSWORD: ${BOT_DB_PASSWORD}
