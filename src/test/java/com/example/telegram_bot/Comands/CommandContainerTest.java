@@ -1,7 +1,8 @@
 package com.example.telegram_bot.Comands;
 
-import com.example.telegram_bot.Services.SendBotMessageService;
-import com.example.telegram_bot.Services.TelegramUserService;
+import com.example.telegram_bot.Client.TelegramBotGroupClient;
+import com.example.telegram_bot.Client.TelegramBotGroupClientImpl;
+import com.example.telegram_bot.Services.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -16,12 +17,16 @@ import java.util.Arrays;
 class CommandContainerTest {
     private CommandContainer commandContainer;
     private TelegramUserService telegramUserService;
+    private GroupSubService groupSubService;
+    private TelegramBotGroupClient telegramBotGroupClient;
 
     @BeforeEach
     public void init() {
         SendBotMessageService sendBotMessageService = Mockito.mock(SendBotMessageService.class);
-        telegramUserService= Mockito.mock(TelegramUserService.class);
-        commandContainer = new CommandContainer(sendBotMessageService,telegramUserService);
+        telegramUserService= Mockito.mock(TelegramUserServiceImpl.class);
+        groupSubService=Mockito.mock(GroupSubServiceImpl.class);
+        telegramBotGroupClient=Mockito.mock(TelegramBotGroupClientImpl.class);
+        commandContainer = new CommandContainer(sendBotMessageService,telegramUserService,telegramBotGroupClient,groupSubService);
 
     }
 

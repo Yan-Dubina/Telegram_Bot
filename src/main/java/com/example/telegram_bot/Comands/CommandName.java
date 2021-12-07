@@ -9,6 +9,7 @@ public enum CommandName {
     NEW_USER("/adduser"),
     STAT("/stat"),
     ADD_GROUP_SUB("/addgroupsub"),
+    LIST_GROUP_SUB("/listgroupsub"),
     STOP ("/stop");
 
     private final String commandName;
