@@ -13,7 +13,7 @@ services:
       BOT_DB_PASSWORD: ${BOT_DB_PASSWORD}
     restart: always
   telegram-db:
-    image: mysql:5.7.29
+    image: mysql:5.7
     restart: always
     container_name: dev-telegrambot-db
     ports:
@@ -23,5 +23,5 @@ services:
     environment:
       MYSQL_DATABASE: 'dev_telegram_db'
       MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_USER: ${BOT_DB_USERNAME}
-      MYSQL_PASSWORD: ${BOT_DB_PASSWORD}
+      MYSQL_USER: 'babyan'
+      MYSQL_PASSWORD: 'root'
