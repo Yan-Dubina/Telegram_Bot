@@ -8,6 +8,7 @@ public enum CommandName {
     NO_COMMAND("nocommand"),
     NEW_USER("/adduser"),
     STAT("/stat"),
+    ADD_GROUP_SUB("/addgroupsub"),
     STOP ("/stop");
 
     private final String commandName;
