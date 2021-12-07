@@ -2,11 +2,14 @@ package com.example.telegram_bot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
+import org.springframework.boot.autoconfigure.flyway.FlywayConfigurationCustomizer;
 
 @SpringBootApplication
 public class TelegramBotApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(TelegramBotApplication.class, args);
     }
 
