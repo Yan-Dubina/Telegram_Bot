@@ -1,9 +1,9 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 import com.example.telegram_bot.Services.SendBotMessageService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import static com.example.telegram_bot.Comands.CommandName.*;
+import static com.example.telegram_bot.Commands.CommandName.*;
 
 public class HelpCommand implements Command {
 

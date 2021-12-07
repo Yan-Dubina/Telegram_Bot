@@ -1,4 +1,4 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 import com.example.telegram_bot.Client.TelegramBotGroupClient;
 import com.example.telegram_bot.Services.GroupSubService;
@@ -6,14 +6,16 @@ import com.example.telegram_bot.Services.SendBotMessageService;
 import com.example.telegram_bot.dto.GroupDiscussionInfo;
 import com.example.telegram_bot.dto.GroupRequestArgs;
 import com.example.telegram_bot.repository.entity.GroupSub;
+import org.aspectj.weaver.tools.Trace;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-import static com.example.telegram_bot.Comands.CommandName.ADD_GROUP_SUB;
-import static com.example.telegram_bot.Comands.CommandUtils.getChatId;
-import static com.example.telegram_bot.Comands.CommandUtils.getMessage;
+import static com.example.telegram_bot.Commands.CommandName.ADD_GROUP_SUB;
+import static com.example.telegram_bot.Commands.CommandUtils.getChatId;
+import static com.example.telegram_bot.Commands.CommandUtils.getMessage;
 import static java.util.Objects.isNull;
 import static org.apache.commons.lang3.StringUtils.SPACE;
 import static org.apache.commons.lang3.StringUtils.isNumeric;
@@ -33,6 +35,7 @@ public class AddGroupSubCommand implements Command {
 
     @Override
     public void execute(Update update) {
+
         if (getMessage(update).equalsIgnoreCase(ADD_GROUP_SUB.getCommandName())) {
             sendGroupIdList(getChatId(update).toString());
             return;

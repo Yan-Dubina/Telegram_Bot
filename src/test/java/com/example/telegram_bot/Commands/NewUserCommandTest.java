@@ -1,6 +1,6 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
-import static com.example.telegram_bot.Comands.CommandName.NEW_USER;
+import static com.example.telegram_bot.Commands.CommandName.NEW_USER;
 public class NewUserCommandTest extends AbstractCommandTest{
 
     @Override

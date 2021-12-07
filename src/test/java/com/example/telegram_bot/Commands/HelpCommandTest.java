@@ -1,5 +1,5 @@
-package com.example.telegram_bot.Comands;
-import static com.example.telegram_bot.Comands.CommandName.HELP;
+package com.example.telegram_bot.Commands;
+import static com.example.telegram_bot.Commands.CommandName.HELP;
 public class HelpCommandTest extends AbstractCommandTest{
 
     @Override

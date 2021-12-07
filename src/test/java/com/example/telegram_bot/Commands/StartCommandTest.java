@@ -1,6 +1,6 @@
-package com.example.telegram_bot.Comands;
-import static  com.example.telegram_bot.Comands.CommandName.START;
-import  static  com.example.telegram_bot.Comands.StartCommand.START_MESSAGE;
+package com.example.telegram_bot.Commands;
+import static  com.example.telegram_bot.Commands.CommandName.START;
+import  static  com.example.telegram_bot.Commands.StartCommand.START_MESSAGE;
 
 public class StartCommandTest extends AbstractCommandTest {
     @Override

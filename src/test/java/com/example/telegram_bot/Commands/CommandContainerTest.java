@@ -1,4 +1,4 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 import com.example.telegram_bot.Client.TelegramBotGroupClient;
 import com.example.telegram_bot.Client.TelegramBotGroupClientImpl;

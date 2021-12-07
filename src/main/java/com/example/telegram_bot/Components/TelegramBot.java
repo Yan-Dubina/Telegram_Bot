@@ -1,7 +1,7 @@
 package com.example.telegram_bot.Components;
 
 import com.example.telegram_bot.Client.TelegramBotGroupClient;
-import com.example.telegram_bot.Comands.CommandContainer;
+import com.example.telegram_bot.Commands.CommandContainer;
 import com.example.telegram_bot.Services.GroupSubService;
 import com.example.telegram_bot.Services.SendBotMessageServiceImpl;
 import com.example.telegram_bot.Services.TelegramUserService;
@@ -14,7 +14,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.Locale;
 
-import static com.example.telegram_bot.Comands.CommandName.*;
+import static com.example.telegram_bot.Commands.CommandName.*;
 
 @Component
 public class TelegramBot extends TelegramLongPollingBot {

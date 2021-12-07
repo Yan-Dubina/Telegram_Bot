@@ -1,4 +1,4 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 import com.example.telegram_bot.Client.TelegramBotGroupClient;
 import com.example.telegram_bot.Services.GroupSubService;
@@ -6,7 +6,7 @@ import com.example.telegram_bot.Services.SendBotMessageService;
 import com.example.telegram_bot.Services.TelegramUserService;
 import com.google.common.collect.ImmutableMap;
 
-import static com.example.telegram_bot.Comands.CommandName.*;
+import static com.example.telegram_bot.Commands.CommandName.*;
 
 public class CommandContainer {
 
@@ -25,11 +25,12 @@ public class CommandContainer {
                 .put(STAT.getCommandName(), new StatCommand(sendBotMessageService, telegramUserService))
                 .put(ADD_GROUP_SUB.getCommandName(), new AddGroupSubCommand(sendBotMessageService, telegramBotGroupClient, groupSubService))
                 .put(LIST_GROUP_SUB.getCommandName(), new ListGroupSubCommand(sendBotMessageService, telegramUserService))
-                .build();
+                .put(DELETE_GROUP_SUB.getCommandName(), new DeleteGroupSubCommand(sendBotMessageService,telegramUserService, groupSubService) ).build();
         unknownCommand = new UnknownCommand(sendBotMessageService);
     }
 
     public Command retriveCommand(String commandIdentifier) {
+
         return commandMap.getOrDefault(commandIdentifier, unknownCommand);
     }
 }

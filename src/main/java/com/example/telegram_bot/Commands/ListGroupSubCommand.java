@@ -1,4 +1,4 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 import com.example.telegram_bot.Services.SendBotMessageService;
 import com.example.telegram_bot.Services.TelegramUserService;
@@ -9,7 +9,7 @@ import javax.ws.rs.NotFoundException;
 
 import java.util.stream.Collectors;
 
-import static com.example.telegram_bot.Comands.CommandUtils.getChatId;
+import static com.example.telegram_bot.Commands.CommandUtils.getChatId;
 
 public class ListGroupSubCommand implements Command {
 
