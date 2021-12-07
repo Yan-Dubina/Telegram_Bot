@@ -1,4 +1,4 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 public enum CommandName {
 
@@ -10,6 +10,7 @@ public enum CommandName {
     STAT("/stat"),
     ADD_GROUP_SUB("/addgroupsub"),
     LIST_GROUP_SUB("/listgroupsub"),
+    DELETE_GROUP_SUB("/deletgroupsub"),
     STOP ("/stop");
 
     private final String commandName;

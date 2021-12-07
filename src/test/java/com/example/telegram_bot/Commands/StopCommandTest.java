@@ -1,7 +1,7 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
-import static com.example.telegram_bot.Comands.CommandName.STOP;
-import static com.example.telegram_bot.Comands.StopCommand.STOP_MESSAGE;
+import static com.example.telegram_bot.Commands.CommandName.STOP;
+import static com.example.telegram_bot.Commands.StopCommand.STOP_MESSAGE;
 
 
 public class StopCommandTest extends AbstractCommandTest{

@@ -1,7 +1,7 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
-import static com.example.telegram_bot.Comands.CommandName.NO_COMMAND;
-import static com.example.telegram_bot.Comands.NoCommand.NO_COMMAND_MESSAGE;
+import static com.example.telegram_bot.Commands.CommandName.NO_COMMAND;
+import static com.example.telegram_bot.Commands.NoCommand.NO_COMMAND_MESSAGE;
 public class NoCommandTest extends AbstractCommandTest{
 
     @Override

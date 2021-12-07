@@ -1,4 +1,4 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 import com.example.telegram_bot.Services.SendBotMessageService;
 import com.example.telegram_bot.Services.TelegramUserService;
@@ -14,8 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static com.example.telegram_bot.Comands.CommandName.LIST_GROUP_SUB;
-import static org.junit.jupiter.api.Assertions.*;
+import static com.example.telegram_bot.Commands.CommandName.LIST_GROUP_SUB;
 
 class ListGroupSubCommandTest {
 

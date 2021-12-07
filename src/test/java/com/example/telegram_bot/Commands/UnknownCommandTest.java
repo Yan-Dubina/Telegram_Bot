@@ -1,7 +1,7 @@
-package com.example.telegram_bot.Comands;
+package com.example.telegram_bot.Commands;
 
 
-import static com.example.telegram_bot.Comands.UnknownCommand.UNKNOWN_MESSAGE;
+import static com.example.telegram_bot.Commands.UnknownCommand.UNKNOWN_MESSAGE;
 
 public class UnknownCommandTest extends AbstractCommandTest {
 
