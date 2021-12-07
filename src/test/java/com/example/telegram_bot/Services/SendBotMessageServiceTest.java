@@ -8,8 +8,6 @@ import org.mockito.Mockito;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @DisplayName("Unit-level testing for SenBotMessageService")
 class SendBotMessageServiceTest {
 
@@ -19,7 +17,7 @@ class SendBotMessageServiceTest {
     @BeforeEach
     public void init() {
         telegramBot = Mockito.mock(TelegramBot.class);
-        sendBotMessageService = new SendBotMessageServiceImp(telegramBot);
+        sendBotMessageService = new SendBotMessageServiceImpl(telegramBot);
     }
 
     @Test

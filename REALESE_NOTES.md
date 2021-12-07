@@ -14,3 +14,11 @@
 
 ## 0.3.0-SNAPSHOT
 * added deployment process
+
+## 0.4.0-SNAPSHOT
+* added DB
+* added migrations DB
+
+## 0.5.0-SNAPSHOTS
+* added AddGroupSubCommand
+* added ListGroupSubCommand
