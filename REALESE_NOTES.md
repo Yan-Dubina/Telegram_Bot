@@ -22,3 +22,9 @@
 ## 0.5.0-SNAPSHOTS
 * added AddGroupSubCommand
 * added ListGroupSubCommand
+
+## 0.6.0-SNAPSHOT
+* added FindNewArticleJob
+* added FindNewArticleService
+* TelegramBotGroupClient
+* Fixed Tests

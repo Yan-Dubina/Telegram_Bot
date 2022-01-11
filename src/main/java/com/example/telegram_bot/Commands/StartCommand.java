@@ -35,7 +35,7 @@ public class StartCommand implements Command {
             telegramUserService.save(telegramUser);
         }
 
-        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), START_MESSAGE);
+        sendBotMessageService.sendMessage(chatId, START_MESSAGE);
 
     }
 }
