@@ -18,14 +18,17 @@ public class HelpCommand implements Command {
                     + "%s - получить помощь в работе со мной\n"
                     + "%s - доватить нового пользователя\n"
                     + "%s - доватить подписку у пользователя\n"
-                    + "%s - показать все подписки у пользователя\n",
+                    + "%s - показать все подписки у пользователя\n"
+                    + "%s - удалить подписку у пользователся\n",
                     START.getCommandName(),
                     STOP.getCommandName(),
                     STAT.getCommandName(),
                     HELP.getCommandName(),
                     NEW_USER.getCommandName(),
                     ADD_GROUP_SUB.getCommandName(),
-                    LIST_GROUP_SUB.getCommandName());
+                    LIST_GROUP_SUB.getCommandName(),
+                    DELETE_GROUP_SUB.getCommandName());
+
 
     public HelpCommand(SendBotMessageService sendBotMessageService) {
         this.sendBotMessageService = sendBotMessageService;

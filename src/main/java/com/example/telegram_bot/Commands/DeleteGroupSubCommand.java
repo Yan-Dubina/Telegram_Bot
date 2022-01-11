@@ -57,7 +57,7 @@ public class DeleteGroupSubCommand implements Command {
                         .orElseThrow(NotFoundException::new);
                 groupSub.getUsers().remove(telegramUser);
                 groupSubService.save(groupSub);
-                sendBotMessageService.sendMessage(chatId, format("Удалена  подписка на группу: %s\"",
+                sendBotMessageService.sendMessage(chatId, format("Удалена подписка на группу: %s",
                         groupSub.getTitle()));
 
             } else {
@@ -82,7 +82,7 @@ public class DeleteGroupSubCommand implements Command {
             message = "Пока нет подписок на группы. Чтобы добавить подписку напиши /addGroupSub";
         } else {
             message ="Чтобы удалить подписку на группу - передай комадну вместе с ID группы. \n" +
-                    "Например: /deleteGroupSub 16 \n\n" +
+                    "Например: /deletegroupsub 16 \n\n" +
                     "я подготовил список всех групп, на которые ты подписан) \n\n" +
                     "имя группы - ID группы \n\n" +
                     "%s";

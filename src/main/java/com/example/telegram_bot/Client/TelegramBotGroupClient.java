@@ -13,4 +13,5 @@ public interface TelegramBotGroupClient {
     List<GroupDiscussionInfo> getGroupDiscussionList(GroupRequestArgs requestArgs);
     Integer getGroupCount(GroupsCountRequestArgs groupsCountRequestArgs);
     GroupDiscussionInfo getGroupById(Integer id);
+    Integer findLastPostId(Integer groupSub);
 }

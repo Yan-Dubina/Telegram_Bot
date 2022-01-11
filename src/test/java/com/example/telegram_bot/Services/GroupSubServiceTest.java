@@ -28,7 +28,8 @@ public class GroupSubServiceTest {
         TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
         groupSubRepository = Mockito.mock(GroupSubRepository.class);
         telegramBotGroupClient = Mockito.mock(TelegramBotGroupClient.class);
-        groupSubService = new GroupSubServiceImpl(groupSubRepository, telegramUserService);
+        telegramBotGroupClient = Mockito.mock(TelegramBotGroupClient.class);
+        groupSubService = new GroupSubServiceImpl(groupSubRepository, telegramUserService,telegramBotGroupClient);
 
         newUser = new TelegramUser();
         newUser.setActive(true);
@@ -36,7 +37,7 @@ public class GroupSubServiceTest {
 
         Mockito.when(telegramUserService.findByChatId(CHAT_ID.toString())).thenReturn(Optional.of(newUser));
 
-        //Mockito.when(telegramBotGroupClient.findLastPostId(GROUP_ID)).thenReturn(LAST_POST_ID);
+        Mockito.when(telegramBotGroupClient.findLastPostId(GROUP_ID)).thenReturn(LAST_POST_ID);
     }
 
     @Test
@@ -47,10 +48,11 @@ public class GroupSubServiceTest {
         groupDiscussionInfo.setId(GROUP_ID);
         groupDiscussionInfo.setTitle("g1");
 
+
         GroupSub expectedGroupSub = new GroupSub();
         expectedGroupSub.setId(groupDiscussionInfo.getId());
         expectedGroupSub.setTitle(groupDiscussionInfo.getTitle());
-
+        expectedGroupSub.setLastArticleId(LAST_POST_ID);
         expectedGroupSub.addUser(newUser);
 
         //when
@@ -74,6 +76,7 @@ public class GroupSubServiceTest {
         GroupSub groupFromDB = new GroupSub();
         groupFromDB.setId(groupDiscussionInfo.getId());
         groupFromDB.setTitle(groupDiscussionInfo.getTitle());
+        groupFromDB.setLastArticleId(null);
         groupFromDB.addUser(oldTelegramUser);
 
         Mockito.when(groupSubRepository.findById(groupDiscussionInfo.getId())).thenReturn(Optional.of(groupFromDB));
